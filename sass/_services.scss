@@ -1,0 +1,89 @@
+#services-section {
+  margin: 4rem 0;
+  padding: 5rem 0;
+  background-image: url("/images/skills-img.jpg");
+  background-repeat: no-repeat;
+  background-position-x: 33%;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 100;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #2c455d, #00012c);
+    opacity: 0.85;
+    z-index: -1;
+  }
+  .services-wrapper {
+      .services-img {
+          position: relative;
+          a {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform:translate(-50% , -50%);
+              font-size: 1.4rem;
+              padding: 18px;
+              background-color: #00aeef;
+              border-radius: 50%;
+              transition: all 0.3s ease;
+              color: #fff;
+              &:hover {
+                  background-color: #000;
+                  color: #fff;
+                  text-decoration: none;
+              }
+          }
+      }
+    z-index: 1000;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    .services {
+      h1 {
+        color: #fff;
+        font-weight: 600;
+      }
+      .blue-bar {
+        width: 5rem;
+        height: 5px;
+        border-radius: 5px;
+        background-color: #00aeef;
+        margin-top: 1.8rem;
+        margin-bottom: 2rem;
+      }
+      .services-listing {
+          display: grid;
+          grid-template-columns: repeat(3 , 1fr);
+          grid-template-rows: repeat(2 , auto);
+        .single-service {
+            margin-bottom: 2rem;
+          color: #fff;
+          span {
+              display: block;
+              margin-bottom: 15px;
+            font-size: 1.66rem;
+          }
+        }
+      }
+    }
+  }
+}
+/*Media Qureis */
+@media (max-width:900px) {
+    .services-wrapper {
+        grid-template-columns: repeat(1 , 1fr) !important;
+    }
+    .services-listing {
+        text-align: center;
+        grid-template-columns: repeat(2 , 1fr) !important;
+    }
+}

@@ -1,0 +1,142 @@
+#footer-section {
+  padding: 7rem 0;
+  background-image: url("/images/footer-img.jpg");
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 100;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #2c455d, #00012c);
+    opacity: 0.85;
+    z-index: -1;
+  }
+  .inner-footer {
+    .location-creds {
+      p {
+        color: #fff;
+        font-weight: lighter;
+        font-size: 0.98rem;
+        line-height: 1.7;
+        margin: 2rem 0;
+      }
+      .creds-email {
+        margin: 7px 0;
+        i {
+          font-size: 0.88rem;
+          margin-right: 5px;
+          color: #00aeef;
+        }
+        span {
+          font-size: 0.9rem;
+          color: #fff;
+          font-weight: lighter;
+        }
+      }
+    }
+    .lists {
+      ul {
+        list-style-type: none;
+        margin: 0 !important;
+        margin: 2rem 0 !important;
+        padding: 0 !important;
+        li {
+          color: #fff;
+          margin-bottom: 1.2rem;
+          font-size: 0.9rem;
+          font-weight: 400;
+        }
+      }
+    }
+    .footer-links {
+      a {
+        color: #ffff;
+        font-weight: 400;
+        transition: all 0.3s ease;
+        font-weight: 600;
+        &:hover {
+          color: #00aeef;
+          text-decoration: none;
+        }
+      }
+    }
+    .newsletter {
+      p {
+        margin: 2.5rem 0;
+        color: #fff;
+        font-weight: lighter;
+      }
+      form {
+        input {
+          display: block;
+          padding: 5px 12px;
+          outline: 0;
+          border: 0;
+          position: relative;
+        }
+        button {
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 100%;
+          padding: 0 13px;
+          outline: 0;
+          border: 0;
+          background: #00aeef;
+          color: #fff;
+        }
+      }
+      .footer-nav-links {
+        margin: 0.9rem 0;
+        ul {
+          margin: 0 !important;
+          padding: 0 !important;
+          list-style-type: none;
+          li {
+            display: inline;
+            margin-right: 15px;
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  .author {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+     .author-creds {
+         padding: 15px 0;
+        border-top: 1px solid #f4f4f4;
+        span {
+            color: #fff;
+        } 
+        a {
+            transition: all 0.3s ease;
+            color: #fff;
+            &:hover {
+                color: #00aeef;
+                text-decoration:none;
+            }
+        }
+     }
+  }
+}
+
+/*Media Qureies*/ 
+@media (max-width:900px) {
+    .newsletter {
+        input {
+            width: 100%;
+        }
+    }
+}
